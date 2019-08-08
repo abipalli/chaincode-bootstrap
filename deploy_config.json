@@ -3,13 +3,16 @@
         "chaincode": [
             {
                 "name": "ping",
+                "version": "1.0.0",
+                
                 "path": "chaincode/ping",
                 "channels": [
                     "defaultchannel"
                 ],
-                "init_args": [],
+                "install": true,
+
                 "instantiate": true,
-                "install": true
+                "init_args": []
             }
         ]
     }

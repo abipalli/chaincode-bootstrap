@@ -28,6 +28,33 @@ golang_chaincode_repository:
   README.md
 ```
 
+### Configuring `deploy_config.json`
+```
+{
+  [ org msp id ]: {
+    "chaincode": [
+      {
+        "name": [ chaincode name ],
+        "version": [ chaincode version ],
+        
+        "path": [ relative chaincode path ],
+        "channels": [
+          [ channel name ],
+          ...
+        ],
+
+        "install": [ true , false ],
+
+        "instantiate": [ true, false ],
+        "init_fn": [ chaincode init function (default: "init") ]   
+        "init_args": [ chaincode init arguments (default: []) ]
+      },
+      ...
+    ]
+  }
+}
+```
+
 ## Chaincode Deployment Instructions
 Populate the [deployment configuration](deploy_config.json) JSON file with information about network targets, inculding organizations, channels, and peers. Please note that included in this repostiory, there is a deployment configuration example file with the default network architecture to install and instantiate the ping chaincode component on a Hyperledger Fabric network.
 
