@@ -7,7 +7,7 @@
                 
                 "path": "chaincode/ping",
                 "channels": [
-                    "defaultchannel"
+                    "channel1"
                 ],
                 "install": true,
 
